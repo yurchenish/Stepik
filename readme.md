@@ -7,7 +7,7 @@
 ---
 
 <div style="text-align:center; margin: auto;">
-    <img style="max-width:450px; max-height:150px" src="https://myrowdy.ru/wp-content/uploads/2020/05/stepik_logotype_blac-1536x614.png" alt="logo_stepik">
+    <img style="max-width:450px; max-height:150px" src="https://www.ranepa.ru/upload/iblock/22b/pic.png" alt="logo_stepik">
 </div>
 
 ---
