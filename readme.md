@@ -9,7 +9,7 @@
 ---
 
 <div style="text-align:center; margin: auto; width: 450px">
-    <img align="" src="https://stepik.org/static/frontend/topbar_logo.svg" alt="logo_stepik">
+    <img align="" src="https://myrowdy.ru/wp-content/uploads/2020/05/stepik_logotype_blac-1536x614.png" alt="logo_stepik">
 </div>
 
 ---
