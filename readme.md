@@ -1,7 +1,5 @@
 <h1>Test Automation Python with Stepik</h1>
 
----
-
 <div>
     <p>Данный репозиторий является финальной работой в курсе от Stepik</p>
 </div>
