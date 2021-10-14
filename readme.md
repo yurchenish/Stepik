@@ -1,9 +1,9 @@
-<h1 style="text-align:center">Test Automation Python with Stepik</h1>
+<h1>Test Automation Python with Stepik</h1>
 
 ---
 
-<div style="text-align:center ">
-    <p style="margin: auto;">Данный репозиторий является финальной работой в курсе от Stepik</p>
+<div>
+    <p>Данный репозиторий является финальной работой в курсе от Stepik</p>
 </div>
 
 ---
@@ -14,4 +14,4 @@
 
 ---
 
-<div style="text-align:center">thx bro <3</div>
+<div>thx bro <3</div>
