@@ -2,8 +2,8 @@
 
 ---
 
-<div style="text-align:center">
-    <p>Данный репозиторий является финальной работой в курсе от Stepik</p>
+<div style="text-align:center ">
+    <p style="margin: auto;">Данный репозиторий является финальной работой в курсе от Stepik</p>
 </div>
 
 ---
