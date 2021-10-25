@@ -11,3 +11,6 @@ class LoginPageLocators():
     REGISTER_FORM = (By.ID, "register_form")
 
 
+class BasketPageLocators():
+    ADD_IN_BASKET = (By.CLASS_NAME, "btn-add-to-basket")
+    ADD_COMMENT = (By.ID, "write_review")
