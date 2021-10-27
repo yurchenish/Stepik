@@ -14,3 +14,7 @@ class LoginPageLocators():
 class BasketPageLocators():
     ADD_IN_BASKET = (By.CLASS_NAME, "btn-add-to-basket")
     ADD_COMMENT = (By.ID, "write_review")
+    ALARM_BOOK_NAME = (By.CSS_SELECTOR, "#messages>div:nth-child(1) strong")
+    BOOK_NAME = (By.CSS_SELECTOR, ".product_main h1")
+    ALARM_PRICE = (By.CSS_SELECTOR, "#messages>div:nth-child(3) strong")
+    PRICE = (By.CSS_SELECTOR, ".product_main p")

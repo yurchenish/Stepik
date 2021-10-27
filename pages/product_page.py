@@ -22,3 +22,15 @@ class ProductPage(BasePage):
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+    def should_be_message_name_book(self):
+        assert self.browser.find_element(*BasketPageLocators.ALARM_BOOK_NAME).text == \
+            self.browser.find_element(*BasketPageLocators.BOOK_NAME).text, "В корзину попала не та книга"
+
+    def should_be_message_price_book(self):
+        assert self.browser.find_element(*BasketPageLocators.ALARM_PRICE).text == \
+            self.browser.find_element(*BasketPageLocators.PRICE).text, "Цена товара не совпадает с суммой корзины"
+
+    # messages > div:nth-child(1) > div > strong
+    # //*[@id="messages"]/div[1]/div/strong
+    # /html/body/div[2]/div/div[1]/div[1]/div/strong
