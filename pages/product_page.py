@@ -1,12 +1,12 @@
 from .base_page import BasePage
-from .locators import BasketPageLocators
+from .locators import ProductPageLocators
 from selenium.common.exceptions import NoAlertPresentException
 import math
 
 
 class ProductPage(BasePage):
     def add_in_basket(self):
-        link = self.browser.find_element(*BasketPageLocators.ADD_IN_BASKET)
+        link = self.browser.find_element(*ProductPageLocators.ADD_IN_BASKET)
         link.click()
 
     def solve_quiz_and_get_code(self):
@@ -24,13 +24,17 @@ class ProductPage(BasePage):
             print("No second alert presented")
 
     def should_be_message_name_book(self):
-        assert self.browser.find_element(*BasketPageLocators.ALARM_BOOK_NAME).text == \
-            self.browser.find_element(*BasketPageLocators.BOOK_NAME).text, "В корзину попала не та книга"
+        assert self.browser.find_element(*ProductPageLocators.ALARM_BOOK_NAME).text == \
+            self.browser.find_element(*ProductPageLocators.BOOK_NAME).text, "В корзину попала не та книга"
 
     def should_be_message_price_book(self):
-        assert self.browser.find_element(*BasketPageLocators.ALARM_PRICE).text == \
-            self.browser.find_element(*BasketPageLocators.PRICE).text, "Цена товара не совпадает с суммой корзины"
+        assert self.browser.find_element(*ProductPageLocators.ALARM_PRICE).text == \
+            self.browser.find_element(*ProductPageLocators.PRICE).text, "Цена товара не совпадает с суммой корзины"
 
-    # messages > div:nth-child(1) > div > strong
-    # //*[@id="messages"]/div[1]/div/strong
-    # /html/body/div[2]/div/div[1]/div[1]/div/strong
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def is_dissappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
