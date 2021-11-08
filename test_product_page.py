@@ -72,3 +72,6 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     page2 = BasketPage(browser, browser.current_url)
     page2.is_basket_empty()
     page2.should_be_basket_empty_message()
+
+# @pytest.mark.login_guest
+# class TestLoginFromMainPage:
