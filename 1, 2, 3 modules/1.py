@@ -1,7 +1,6 @@
 import pytest
 from pages.result import DuckDuckGoResultPage
 from pages.search import DuckDuckGoSearchPage
-from selenium import webdriver
 from selenium.webdriver import Chrome
 @pytest.fixture
 def browser():
