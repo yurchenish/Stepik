@@ -1,6 +1,8 @@
 from pages.product_page import ProductPage
 from pages.basket_page import BasketPage
 from pages.base_page import BasePage
+from pages.login_page import LoginPage
+import time
 import pytest
 
 
@@ -88,3 +90,29 @@ class TestLoginFromMainPage:
         page = BasePage(browser, link)
         page.open()
         page.should_be_login_link()
+
+
+class TestUserAddToBasketFromProductPage:
+    @pytest.fixture(scope="function", autouse=True)
+    def setup(self, browser):
+        link = "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
+        self.login_page = LoginPage(browser, link)
+        self.login_page.open()
+        email = str(time.time()) + "@mail.org"
+        password = "1!Q@#2$w%3^E&4*r(5)T"
+        self.login_page.register_new_user(email, password)
+        self.login_page.should_be_authorized_user()
+
+    def test_user_cant_see_success_message(self, browser):
+        link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
+        page = ProductPage(browser, link)
+        page.open()
+        page.should_not_be_success_message()
+
+    def test_guest_can_add_product_to_basket(self, browser):
+        link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
+        page = ProductPage(browser, link)
+        page.open()
+        page.add_in_basket()
+        page.should_be_message_name_book()
+        page.should_be_message_price_book()
